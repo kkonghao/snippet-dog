@@ -1,0 +1,270 @@
+{
+	"#inc": {
+		"prefix": "#inc",
+		"body": [
+			"#include "
+		],
+		"description": ""
+	},
+
+	
+	"for": {
+		"prefix": "for",
+		"body": [
+			"for (int ${1} = ${2:0}; ${1} < ${3:length}; ${1}++)",
+			"{",
+			"\t$0",
+			"}\n"
+		],
+		"description": "Code snippet for 'for' loop"
+	},
+	
+
+	"foreach":{
+		"prefix":"fore",
+		"body":[
+			"for (auto &i : $1)",
+			"{",
+			"\t$0",
+			"}\n"
+		],
+		"description": "Code snippet for 'for' auto"
+	},
+	
+		"do": {
+		"prefix": ["do"],
+		"body": 
+		[
+			"do",
+			"{",
+			"\t$0",
+			"} while($1);\n"
+		],
+		"description": "Code snippet for do...while loop"
+	},
+	"while": {
+		"prefix": "while",
+		"body": [
+			"while ($1)",
+			"{",
+			"\t$0",
+			"}\n"
+		],
+		"description": ""
+	},
+
+	"if": {
+		"prefix": "if",
+		"body": [
+			"if ($1)",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "Code snippet for if statement"
+	},
+	"else": {
+		"prefix": "else",
+		"body": [
+			"else",
+			"{",
+			"\t$0",
+			"}\n"
+		],
+		"description": "Code snippet for else statement"
+	},
+	"else if": {
+		"prefix": "else if",
+		"body": [
+			"else if ($1)",
+			"{",
+			"\t$0",
+			"}"
+		],
+		"description": "Code snippet for else-if statement"
+	},
+	"enum": {
+		"prefix": "enum",
+		"body": [
+			"enum $1",
+			"{",
+			"\t$0",
+			"};\n"
+		],
+		"description": "Code snippet for enum"
+	},
+
+	"class": {
+		"prefix": "class",
+		"body": [
+			"class $1",
+			"{",
+			"public:",
+			" \t$0",
+			"};\n"
+		],
+		"description": "Code snippet for class"
+	},
+	
+	"namespace": {
+		"prefix": "namespace",
+		"body": [
+			"namespace $1",
+			"{",
+			"\t$0",
+			"}//$1\n"
+		]
+	},
+	
+	"#ifndef": {
+		"prefix": "#ifndef",
+		"body": [
+			"#ifndef __${TM_FILENAME_BASE:/upcase}_h__",
+			"#define __${TM_FILENAME_BASE}_h__",
+			"$0",
+			"#endif  //!__${TM_FILENAME_BASE}_h__"
+		],
+		"description": "Code snippet for #ifndef"
+	},
+
+
+	"#ifdef": {
+		"prefix": "#ifdef",
+		"body": [
+			"#ifdef ${1}",
+			"$0",
+			"#endif //$1"
+		],
+		"description": "Code snippet for #if"
+	},
+	"struct": {
+		"prefix": "struct",
+		"body": [
+			"struct $1",
+			"{",
+			"\t$0",
+			"};"
+		],
+		"description": "Code snippet for struct"
+	},
+	"switch": {
+		"prefix": "switch",
+		"body": [
+			"switch ($1)",
+			"{",
+			"  case $2:",
+			"\t$0",
+			"\tbreak;",
+			"$3",
+			
+			"  default:",
+			"\tbreak;",
+			"}"
+		],
+
+		"description": "Code snippet for switch statement"
+	},
+	"case":{
+		"prefix":"case",
+		"body":[
+			"case ${1:/*case*/}:",
+			"\t$0",
+			"\tbreak;"
+		],
+		"description": "case (...)"
+	},
+	"try": {
+		"prefix": "try",
+		"body": [
+			"try",
+			"{",
+			"\t$1",
+			"}",
+			"catch (const std::exception& $2)",
+			"{",
+			"\t$0",
+			"}\n"
+		],
+		"description": "Code snippet for try catch"
+	},
+	"union": {
+		"prefix": "union",
+		"body": 
+		[
+			"union $1",
+			"{",
+			"\t$0",
+			"};\n"
+		],
+		"description": "Code snippet for union"
+	},
+	"cin":
+	{
+		"prefix":"cin",
+		"body":
+		[
+			"std::cin << "
+		],
+		"description": "Code snippet for printing to std::cout, provided the header is set"
+	},
+
+	"cout": 
+	{
+		"prefix": "cout",
+		"body": 
+		[
+			"std::cout << "
+		],
+		"description": "Code snippet for printing to std::cout, provided the header is set"
+	},
+
+	"endl":
+	{
+		"prefix":"endl",
+		"body":[
+			"std::endl;"
+		],
+		"description": ""
+	},
+
+	"#def": {
+		"prefix": "#def",
+		"body": [
+			"#define  $1  $2\n"
+			],
+		"description": ""
+	},
+
+	"main": {
+        "prefix": [ "main" ],
+        "body": [
+			"int\tmain(int argc, char **argv)",
+			"{",
+            "\t$0",
+            
+			"\n",
+			"\tsystem(\"pause\");",
+			"\treturn 0;",
+			"}\n"
+        ],
+        "description": "create a main function"
+	},
+
+"fileheader": {
+		"prefix": "fileheader",
+		"body": [
+			"/**",
+			"**********************************************************************************************************************************************************************************************************************************",
+			"* @file:\t$TM_FILENAME",
+			"* @author:\t$2",
+			"* @version:\t$3",
+			"* @date:\t$CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
+			"* @brief:\t$5",
+			"**********************************************************************************************************************************************************************************************************************************",
+			"**/"
+		],
+		"description": "File Header"
+	}
+	
+
+}
