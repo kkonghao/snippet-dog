@@ -77,10 +77,10 @@
 	"#ifndef": {
 		"prefix": "#ifndef",
 		"body": [
-			"#ifndef __${TM_FILENAME_BASE}_h__",
-			"#define __${TM_FILENAME_BASE}_h__",
+			"#ifndef __${TM_FILENAME_BASE}__h__",
+			"#define __${TM_FILENAME_BASE}__h__",
 			"$0",
-			"#endif  //!__${TM_FILENAME_BASE}_h__"
+			"#endif  //!__${TM_FILENAME_BASE}__h__"
 		],
 		"description": "Code snippet for #ifndef"
 	},
@@ -180,10 +180,9 @@
 			"/**",
 			"**********************************************************************************************************************************************************************************************************************************",
 			"* @file:\t$TM_FILENAME",
-			"* @author:\t$2",
-			"* @version:\t$3",
+			"* @author:\t$1",
 			"* @date:\t$CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
-			"* @brief:\t$5",
+			"* @brief:\t$2",
 			"**********************************************************************************************************************************************************************************************************************************",
 			"**/"
 		],

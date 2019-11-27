@@ -7,7 +7,7 @@
 		"description": ""
 	},
 
-	
+
 	"for": {
 		"prefix": "for",
 		"body": [
@@ -23,7 +23,7 @@
 	"foreach":{
 		"prefix":"fore",
 		"body":[
-			"for (auto &i : $1)",
+			"for (auto &$1 : $2)",
 			"{",
 			"\t$0",
 			"}\n"
@@ -119,10 +119,10 @@
 	"#ifndef": {
 		"prefix": "#ifndef",
 		"body": [
-			"#ifndef __${TM_FILENAME_BASE:/upcase}_h__",
-			"#define __${TM_FILENAME_BASE}_h__",
+			"#ifndef __${TM_FILENAME_BASE}__h__",
+			"#define __${TM_FILENAME_BASE}__h__",
 			"$0",
-			"#endif  //!__${TM_FILENAME_BASE}_h__"
+			"#endif  //!__${TM_FILENAME_BASE}__h__"
 		],
 		"description": "Code snippet for #ifndef"
 	},
@@ -143,7 +143,7 @@
 			"struct $1",
 			"{",
 			"\t$0",
-			"};"
+			"};\n"
 		],
 		"description": "Code snippet for struct"
 	},
@@ -203,9 +203,9 @@
 		"prefix":"cin",
 		"body":
 		[
-			"std::cin << "
+			"std::cin << $0"
 		],
-		"description": "Code snippet for printing to std::cout"
+		"description": "Code snippet for std::cout"
 	},
 
 	"cout": 
@@ -213,9 +213,9 @@
 		"prefix": "cout",
 		"body": 
 		[
-			"std::cout << "
+			"std::cout << $0"
 		],
-		"description": "Code snippet for printing to std::coutt"
+		"description": "Code snippet for std::coutt"
 	},
 
 	"endl":
@@ -236,7 +236,7 @@
 	},
 
 	"main": {
-        "prefix": [ "main" ],
+        "prefix": "main",
         "body": [
 			"int\tmain(int argc, char **argv)",
 			"{",
@@ -256,10 +256,9 @@
 			"/**",
 			"**********************************************************************************************************************************************************************************************************************************",
 			"* @file:\t$TM_FILENAME",
-			"* @author:\t$2",
-			"* @version:\t$3",
+			"* @author:\t$1",
 			"* @date:\t$CURRENT_YEAR年$CURRENT_MONTH月$CURRENT_DATE日 $CURRENT_HOUR:$CURRENT_MINUTE:$CURRENT_SECOND $CURRENT_DAY_NAME",
-			"* @brief:\t$5",
+			"* @brief:\t$2",
 			"**********************************************************************************************************************************************************************************************************************************",
 			"**/"
 		],
@@ -269,26 +268,33 @@
 	"private":{
 		"prefix": "pri",
 		"body": [
-			"private:$0"
+			"private:",
+			"\t$0"
 		],
 		"description": "private snippet"
 	},
 	"public":{
 		"prefix": "pub",
 		"body": [
-			"public:$0"
+			"public:",
+			"\t$0"
 		],
 		"description": "public snippet"
 	},
 	"protected":{
-		"prefix": "pub",
+		"prefix": "pro",
 		"body": [
-			"protected:$0"
+			"protected:",
+			"\t$0"
 		],
 		"description": "protected snippet"
+	},
+	"template":{
+		"prefix":"tem",
+		"body":[
+			"template <typename $0>"
+		],
+		"description": "template snippet"
 	}
-
-
-	
-
 }
+

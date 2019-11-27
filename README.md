@@ -7,8 +7,8 @@ This extension for Visual Studio Code adds snippets for C/C++.
 2. Launch VS Code
 3. From the command palette `Ctrl`+`Shift`+`P` (Windows, Linux) or `Cmd`+`Shift`+`P` (OSX)
 4. Type `ext install` or just simply select `Install Extension`
-5. Choose the extension - Cpp Snippets
-6. Relaunch VS Code
+5. Choose the extension - C/C++ Dog Snippets
+
 
 
 *Suggestions for improvement are welcome.*
