@@ -7,6 +7,13 @@
 		"description": ""
 	},
 
+	"using":{
+		"prefix":"using",
+		"body":[
+			"using namespace $0"
+		],
+		"description": "Code snippet for using namespace"
+	},
 
 	"for": {
 		"prefix": "for",

@@ -3,7 +3,7 @@
     "publisher": "2211896472",
     "displayName": "C/C++ Dog Snippets",
     "description": "Code snippets for C/C++",
-    "version": "0.1.26",
+    "version": "0.1.27",
     "engines": {
 		"vscode": "^0.10.1"
 	},
