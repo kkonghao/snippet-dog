@@ -40,7 +40,7 @@
 			"\t$0",
 			"}"
 		],
-		"description": "Code snippet for if statement"
+		"description": "Code snippet for if"
 	},
 	"else": {
 		"prefix": "else",
@@ -50,7 +50,7 @@
 			"\t$0",
 			"}\n"
 		],
-		"description": "Code snippet for else statement"
+		"description": "Code snippet for else"
 	},
 	"else if": {
 		"prefix": "else if",
@@ -60,7 +60,7 @@
 			"\t$0",
 			"}"
 		],
-		"description": "Code snippet for else-if statement"
+		"description": "Code snippet for else-if  "
 	},
 	"enum": {
 		"prefix": "enum",
@@ -120,7 +120,7 @@
 			"}"
 		],
 
-		"description": "Code snippet for switch statement"
+		"description": "Code snippet for switch"
 	},
 	"case":{
 		"prefix":"case",

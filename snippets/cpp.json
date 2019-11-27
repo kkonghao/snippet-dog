@@ -61,7 +61,7 @@
 			"\t$0",
 			"}"
 		],
-		"description": "Code snippet for if statement"
+		"description": "Code snippet for if  "
 	},
 	"else": {
 		"prefix": "else",
@@ -71,7 +71,7 @@
 			"\t$0",
 			"}\n"
 		],
-		"description": "Code snippet for else statement"
+		"description": "Code snippet for else"
 	},
 	"else if": {
 		"prefix": "else if",
@@ -81,7 +81,7 @@
 			"\t$0",
 			"}"
 		],
-		"description": "Code snippet for else-if statement"
+		"description": "Code snippet for else-if"
 	},
 	"enum": {
 		"prefix": "enum",
@@ -162,7 +162,7 @@
 			"}"
 		],
 
-		"description": "Code snippet for switch statement"
+		"description": "Code snippet for switch  "
 	},
 	"case":{
 		"prefix":"case",
@@ -205,7 +205,7 @@
 		[
 			"std::cin << "
 		],
-		"description": "Code snippet for printing to std::cout, provided the header is set"
+		"description": "Code snippet for printing to std::cout"
 	},
 
 	"cout": 
@@ -215,7 +215,7 @@
 		[
 			"std::cout << "
 		],
-		"description": "Code snippet for printing to std::cout, provided the header is set"
+		"description": "Code snippet for printing to std::coutt"
 	},
 
 	"endl":
@@ -264,7 +264,31 @@
 			"**/"
 		],
 		"description": "File Header"
+	},
+
+	"private":{
+		"prefix": "pri",
+		"body": [
+			"private:$0"
+		],
+		"description": "private snippet"
+	},
+	"public":{
+		"prefix": "pub",
+		"body": [
+			"public:$0"
+		],
+		"description": "public snippet"
+	},
+	"protected":{
+		"prefix": "pub",
+		"body": [
+			"protected:$0"
+		],
+		"description": "protected snippet"
 	}
+
+
 	
 
 }
