@@ -62,7 +62,7 @@
 			"\t$0",
 			"}"
 		],
-		"description": "Code snippet for else-if  "
+		"description": "snippet for else-if  "
 	},
 	"enum": {
 		"prefix": "enum",
@@ -72,7 +72,7 @@
 			"\t$0",
 			"};\n"
 		],
-		"description": "Code snippet for enum"
+		"description": "snippet for enum"
 	},
 
 
@@ -84,7 +84,7 @@
 			"$0",
 			"#endif  //!__${TM_FILENAME_BASE}__h__"
 		],
-		"description": "Code snippet for #ifndef"
+		"description": "snippet for #ifndef"
 	},
 
 	"#ifdef": {
@@ -94,7 +94,7 @@
 			"$0",
 			"#endif //$1"
 		],
-		"description": "Code snippet for #if"
+		"description": "snippet for #if"
 	},
 
 	"struct": {
@@ -105,9 +105,9 @@
 			"\t$0",
 			"};"
 		],
-		"description": "Code snippet for struct"
+		"description": "snippet for struct"
 	},
-		"switch": {
+	"switch": {
 		"prefix": "switch",
 		"body": [
 			"switch ($1)",
@@ -115,23 +115,23 @@
 			"  case $2:",
 			"\t$0",
 			"\tbreak;",
-			"$3",
-			
+			"\n",
+			"\n",
 			"  default:",
 			"\tbreak;",
 			"}"
 		],
 
-		"description": "Code snippet for switch"
+		"description": "snippet for switch  "
 	},
 	"case":{
 		"prefix":"case",
 		"body":[
-			"case ${1:/*case*/}:",
+			"  case $1:",
 			"\t$0",
 			"\tbreak;"
 		],
-		"description": "case (...)"
+		"description": "snippet for case (...)"
 	},
 
 	"union": {
@@ -142,7 +142,7 @@
 			"\t$0",
 			"}\n;"
 		],
-		"description": "Code snippet for union"
+		"description": "snippet for union"
 	},
 
 	"#inc": {
@@ -157,9 +157,10 @@
 	"#def": {
 		"prefix": "#def",
 		"body": [
-			"#define  $1  $2"
+			"#define  $1  $2",
+			"$0"
 			],
-		"description": "Code snippet for #define"
+		"description": "snippet for #define"
 	},
 	  "main": {
         "prefix": [ "main" ],
@@ -188,6 +189,6 @@
 			"**********************************************************************************************************************************************************************************************************************************",
 			"**/"
 		],
-		"description": "File Header"
+		"description": "create a file header"
 	}
 }

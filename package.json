@@ -1,9 +1,9 @@
 {
     "name": "Snippets",
     "publisher": "2211896472",
-    "displayName": "C/C++ Dog Snippets",
+    "displayName": "C/C++ Snippets Pro",
     "description": "Code snippets for C/C++",
-    "version": "0.1.27",
+    "version": "0.1.28",
     "engines": {
 		"vscode": "^0.10.1"
 	},

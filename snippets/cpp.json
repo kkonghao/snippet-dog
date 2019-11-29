@@ -12,7 +12,7 @@
 		"body":[
 			"using namespace $0"
 		],
-		"description": "Code snippet for using namespace"
+		"description": "snippet for using namespace"
 	},
 
 	"for": {
@@ -23,7 +23,7 @@
 			"\t$0",
 			"}\n"
 		],
-		"description": "Code snippet for 'for' loop"
+		"description": "snippet for 'for' loop"
 	},
 	
 
@@ -35,7 +35,7 @@
 			"\t$0",
 			"}\n"
 		],
-		"description": "Code snippet for 'for' auto"
+		"description": "snippet for 'for' auto"
 	},
 	
 		"do": {
@@ -47,7 +47,7 @@
 			"\t$0",
 			"} while($1);\n"
 		],
-		"description": "Code snippet for do...while loop"
+		"description": "snippet for do...while loop"
 	},
 	"while": {
 		"prefix": "while",
@@ -68,7 +68,7 @@
 			"\t$0",
 			"}"
 		],
-		"description": "Code snippet for if  "
+		"description": "snippet for if  "
 	},
 	"else": {
 		"prefix": "else",
@@ -78,7 +78,7 @@
 			"\t$0",
 			"}\n"
 		],
-		"description": "Code snippet for else"
+		"description": "snippet for else"
 	},
 	"else if": {
 		"prefix": "else if",
@@ -88,7 +88,7 @@
 			"\t$0",
 			"}"
 		],
-		"description": "Code snippet for else-if"
+		"description": "snippet for else-if"
 	},
 	"enum": {
 		"prefix": "enum",
@@ -98,7 +98,7 @@
 			"\t$0",
 			"};\n"
 		],
-		"description": "Code snippet for enum"
+		"description": "snippet for enum"
 	},
 
 	"class": {
@@ -110,7 +110,7 @@
 			" \t$0",
 			"};\n"
 		],
-		"description": "Code snippet for class"
+		"description": "snippet for class"
 	},
 	
 	"namespace": {
@@ -131,7 +131,7 @@
 			"$0",
 			"#endif  //!__${TM_FILENAME_BASE}__h__"
 		],
-		"description": "Code snippet for #ifndef"
+		"description": "snippet for #ifndef"
 	},
 
 
@@ -142,7 +142,7 @@
 			"$0",
 			"#endif //$1"
 		],
-		"description": "Code snippet for #if"
+		"description": "snippet for #if"
 	},
 	"struct": {
 		"prefix": "struct",
@@ -152,7 +152,7 @@
 			"\t$0",
 			"};\n"
 		],
-		"description": "Code snippet for struct"
+		"description": "snippet for struct"
 	},
 	"switch": {
 		"prefix": "switch",
@@ -162,23 +162,23 @@
 			"  case $2:",
 			"\t$0",
 			"\tbreak;",
-			"$3",
-			
+			"\n",
+			"\n",
 			"  default:",
 			"\tbreak;",
 			"}"
 		],
 
-		"description": "Code snippet for switch  "
+		"description": "snippet for switch  "
 	},
 	"case":{
 		"prefix":"case",
 		"body":[
-			"case ${1:/*case*/}:",
+			"  case $1:",
 			"\t$0",
 			"\tbreak;"
 		],
-		"description": "case (...)"
+		"description": "snippet for case (...)"
 	},
 	"try": {
 		"prefix": "try",
@@ -192,7 +192,7 @@
 			"\t$0",
 			"}\n"
 		],
-		"description": "Code snippet for try catch"
+		"description": "snippet for try catch"
 	},
 	"union": {
 		"prefix": "union",
@@ -203,7 +203,7 @@
 			"\t$0",
 			"};\n"
 		],
-		"description": "Code snippet for union"
+		"description": "snippet for union"
 	},
 	"cin":
 	{
@@ -212,7 +212,7 @@
 		[
 			"std::cin << $0"
 		],
-		"description": "Code snippet for std::cout"
+		"description": "snippet for std::cout"
 	},
 
 	"cout": 
@@ -222,7 +222,7 @@
 		[
 			"std::cout << $0"
 		],
-		"description": "Code snippet for std::coutt"
+		"description": "snippet for std::coutt"
 	},
 
 	"endl":
@@ -269,7 +269,7 @@
 			"**********************************************************************************************************************************************************************************************************************************",
 			"**/"
 		],
-		"description": "File Header"
+		"description": "create a file header"
 	},
 
 	"private":{
