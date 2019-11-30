@@ -106,8 +106,11 @@
 		"body": [
 			"class $1",
 			"{",
-			"public:",
-			" \t$0",
+			
+			"$0",
+			"\n",
+			"private:",
+			" \t$2",
 			"};\n"
 		],
 		"description": "snippet for class"
@@ -207,7 +210,7 @@
 	},
 	"cin":
 	{
-		"prefix":"cin",
+		"prefix":"ci",
 		"body":
 		[
 			"std::cin << $0"
@@ -217,13 +220,14 @@
 
 	"cout": 
 	{
-		"prefix": "cout",
+		"prefix": "cou",
 		"body": 
 		[
 			"std::cout << $0"
 		],
 		"description": "snippet for std::coutt"
 	},
+	
 
 	"endl":
 	{
