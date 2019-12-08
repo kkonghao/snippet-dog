@@ -38,7 +38,7 @@
 		"description": "snippet for 'for' auto"
 	},
 	
-		"do": {
+	"do": {
 		"prefix": ["do"],
 		"body": 
 		[
@@ -49,6 +49,7 @@
 		],
 		"description": "snippet for do...while loop"
 	},
+
 	"while": {
 		"prefix": "while",
 		"body": [
@@ -70,6 +71,7 @@
 		],
 		"description": "snippet for if  "
 	},
+
 	"else": {
 		"prefix": "else",
 		"body": [
@@ -80,6 +82,7 @@
 		],
 		"description": "snippet for else"
 	},
+
 	"else if": {
 		"prefix": "else if",
 		"body": [
@@ -90,6 +93,7 @@
 		],
 		"description": "snippet for else-if"
 	},
+
 	"enum": {
 		"prefix": "enum",
 		"body": [
@@ -104,17 +108,26 @@
 	"class": {
 		"prefix": "class",
 		"body": [
-			"class $1",
-			"{",
-			
-			"$0",
-			"\n",
-			"private:",
-			" \t$2",
+			"class $0",
+			"{",	
+			"",
 			"};\n"
 		],
 		"description": "snippet for class"
 	},
+
+	"class inherit": {
+		"prefix": "clai",
+		"body": [
+			"class $1 :public $0",
+			"{",	
+			"",
+			"};\n"
+		],
+		"description": "snippet for class"
+	},
+
+
 	
 	"namespace": {
 		"prefix": "namespace",
@@ -125,6 +138,7 @@
 			"}//$1\n"
 		]
 	},
+
 	
 	"#ifndef": {
 		"prefix": "#ifndef",
@@ -147,6 +161,7 @@
 		],
 		"description": "snippet for #if"
 	},
+
 	"struct": {
 		"prefix": "struct",
 		"body": [
@@ -157,6 +172,7 @@
 		],
 		"description": "snippet for struct"
 	},
+
 	"switch": {
 		"prefix": "switch",
 		"body": [
@@ -171,9 +187,9 @@
 			"\tbreak;",
 			"}"
 		],
-
 		"description": "snippet for switch  "
 	},
+
 	"case":{
 		"prefix":"case",
 		"body":[
@@ -183,6 +199,7 @@
 		],
 		"description": "snippet for case (...)"
 	},
+
 	"try": {
 		"prefix": "try",
 		"body": [
@@ -197,6 +214,7 @@
 		],
 		"description": "snippet for try catch"
 	},
+	
 	"union": {
 		"prefix": "union",
 		"body": 
@@ -207,35 +225,6 @@
 			"};\n"
 		],
 		"description": "snippet for union"
-	},
-	"cin":
-	{
-		"prefix":"ci",
-		"body":
-		[
-			"std::cin << $0"
-		],
-		"description": "snippet for std::cout"
-	},
-
-	"cout": 
-	{
-		"prefix": "cou",
-		"body": 
-		[
-			"std::cout << $0"
-		],
-		"description": "snippet for std::coutt"
-	},
-	
-
-	"endl":
-	{
-		"prefix":"endl",
-		"body":[
-			"std::endl;"
-		],
-		"description": ""
 	},
 
 	"#def": {
@@ -261,7 +250,7 @@
         "description": "create a main function"
 	},
 
-"fileheader": {
+	"fileheader": {
 		"prefix": "fileheader",
 		"body": [
 			"/**",
@@ -284,6 +273,7 @@
 		],
 		"description": "private snippet"
 	},
+
 	"public":{
 		"prefix": "pub",
 		"body": [
@@ -292,14 +282,18 @@
 		],
 		"description": "public snippet"
 	},
+
 	"protected":{
 		"prefix": "pro",
 		"body": [
 			"protected:",
 			"\t$0"
 		],
-		"description": "protected snippet"
+		"description": "public inherit"
 	},
+
+
+
 	"template":{
 		"prefix":"tem",
 		"body":[
