@@ -265,34 +265,6 @@
 		"description": "create a file header"
 	},
 
-	"private":{
-		"prefix": "pri",
-		"body": [
-			"private:",
-			"\t$0"
-		],
-		"description": "private snippet"
-	},
-
-	"public":{
-		"prefix": "pub",
-		"body": [
-			"public:",
-			"\t$0"
-		],
-		"description": "public snippet"
-	},
-
-	"protected":{
-		"prefix": "pro",
-		"body": [
-			"protected:",
-			"\t$0"
-		],
-		"description": "public inherit"
-	},
-
-
 
 	"template":{
 		"prefix":"tem",
