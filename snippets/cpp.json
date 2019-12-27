@@ -39,7 +39,7 @@
 	},
 	
 	"do": {
-		"prefix": ["do"],
+		"prefix": "do",
 		"body": 
 		[
 			"do",
@@ -117,18 +117,17 @@
 	},
 
 	"class inherit": {
-		"prefix": "clai",
+		"prefix": "classi",
 		"body": [
 			"class $1 :public $0",
 			"{",	
 			"",
 			"};\n"
 		],
-		"description": "snippet for class"
+		"description": "snippet for class inherit"
 	},
 
 
-	
 	"namespace": {
 		"prefix": "namespace",
 		"body": [
@@ -143,10 +142,10 @@
 	"#ifndef": {
 		"prefix": "#ifndef",
 		"body": [
-			"#ifndef __${TM_FILENAME_BASE}__h__",
-			"#define __${TM_FILENAME_BASE}__h__",
+			"#ifndef __${TM_FILENAME_BASE/(.*)/${1:/upcase}/}__H__",
+			"#define __${TM_FILENAME_BASE/(.*)/${1:/upcase}/}__H__",
 			"$0",
-			"#endif  //!__${TM_FILENAME_BASE}__h__"
+			"#endif  //!__${TM_FILENAME_BASE/(.*)/${1:/upcase}/}__H__"
 		],
 		"description": "snippet for #ifndef"
 	},
@@ -155,9 +154,9 @@
 	"#ifdef": {
 		"prefix": "#ifdef",
 		"body": [
-			"#ifdef ${1}",
+			"#ifdef  ${1}",
 			"$0",
-			"#endif //$1"
+			"#endif  //$1"
 		],
 		"description": "snippet for #if"
 	},

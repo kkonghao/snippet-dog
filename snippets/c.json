@@ -1,9 +1,8 @@
 {	
-	
-
 	"for": {
 		"prefix": "for",
-		"body": [
+		"body": 
+		[
 			"for (int ${1} = ${2:0}; ${1} < ${3:length}; ${1}++)",
 			"{",
 			"\t$0",
@@ -12,8 +11,8 @@
 		"description": "Code snippet for 'for' loop"
 	},
 
-		"do": {
-		"prefix": ["do"],
+	"do": {
+		"prefix": "do",
 		"body": 
 		[
 			"do",
@@ -34,6 +33,7 @@
 		],
 		"description": ""
 	},
+
 	"if": {
 		"prefix": "if",
 		"body": [
@@ -44,6 +44,7 @@
 		],
 		"description": "Code snippet for if"
 	},
+
 	"else": {
 		"prefix": "else",
 		"body": [
@@ -75,24 +76,24 @@
 		"description": "snippet for enum"
 	},
 
-
 	"#ifndef": {
 		"prefix": "#ifndef",
 		"body": [
-			"#ifndef __${TM_FILENAME_BASE}__h__",
-			"#define __${TM_FILENAME_BASE}__h__",
+			"#ifndef __${TM_FILENAME_BASE/(.*)/${1:/upcase}/}__H__",
+			"#define __${TM_FILENAME_BASE/(.*)/${1:/upcase}/}__H__",
 			"$0",
-			"#endif  //!__${TM_FILENAME_BASE}__h__"
+			"#endif  //!__${TM_FILENAME_BASE/(.*)/${1:/upcase}/}__H__"
 		],
 		"description": "snippet for #ifndef"
 	},
 
+
 	"#ifdef": {
 		"prefix": "#ifdef",
 		"body": [
-			"#ifdef $1",
+			"#ifdef  $1",
 			"$0",
-			"#endif //$1"
+			"#endif  //$1"
 		],
 		"description": "snippet for #if"
 	},
