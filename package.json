@@ -1,35 +1,35 @@
 {
-    "name": "Snippets",
-    "publisher": "2211896472",
-    "displayName": "C/C++ Snippets Pro",
-    "description": "Code snippets for C/C++",
-    "version": "0.1.37",
-    "engines": {
-		"vscode": "^0.10.1"
-	},
-    "categories": [
-        "Snippets"
-    ],
-    "contributes": {
-		"snippets": [
-			{
-			"language": "c",
-			"path": "./snippets/c.json"
-			},
-			{
-			"language": "cpp",
-			"path": "./snippets/cpp.json"
-			}
-		]
-	},
-    "galleryBanner": { 
-        "color": "#E6E0EA", 
-        "theme": "dark" 
-    },
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/kkonghao/snippet-dog"
-    },
-    "icon": "images/cpp.png",
-    "license": "Check in License in the root folder"
+  "name": "snippets",
+  "publisher": "2211896472",
+  "displayName": "C/C++ Snippets Pro",
+  "description": "Code snippets for C/C++",
+  "version": "0.1.37",
+  "engines": {
+    "vscode": "^0.10.1"
+  },
+  "categories": [
+    "Snippets"
+  ],
+  "contributes": {
+    "snippets": [
+      {
+        "language": "c",
+        "path": "./snippets/c.json"
+      },
+      {
+        "language": "cpp",
+        "path": "./snippets/cpp.json"
+      }
+    ]
+  },
+  "galleryBanner": {
+    "color": "#E6E0EA",
+    "theme": "dark"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kkonghao/snippet-dog"
+  },
+  "icon": "images/cpp.png",
+  "license": "Check in License in the root folder"
 }
